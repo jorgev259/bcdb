@@ -31,7 +31,7 @@ var loadRowsRegistro
 
 function start () {
   gapi.client.init({
-    'clientId': '962014078288-56f50b12mu6rpaij98cqgmqj37973vdc.apps.googleusercontent.com',
+    'clientId': '295105952240-3sotlubuqv8qmriki6hfgrsgcq6grhm6.apps.googleusercontent.com',
     'scope': 'https://www.googleapis.com/auth/spreadsheets',
     'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest']
   }).then(function () {
