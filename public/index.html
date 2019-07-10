@@ -1,0 +1,73 @@
+<head>
+    <meta name="viewport" content="widht-device-widht, inicial-sacale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar-expand-lg navbar navbar-dark bg-primary sticky-top">
+        <a class="navbar-brand">
+          <img src="/img/logo.png" height="35" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navbarAdd">
+            <li class="nav-item"><a class="nav-link" href="${response.data[header][0].url}">Single</a></li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbar_${header}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  ${header}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbar_${header}">
+                    <a class="dropdown-item" href="${item.url}">${item.name}</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link " data-ajax="false" onclick="handleSignOutClick()">Cerrar Sesión</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+
+    <div class="container" style="">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form>
+                        <div class="form-group form-row" id="filter">                     
+                        </div>
+                    </form>
+                    <div id="root" class="table-responsive">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async defer src="https://apis.google.com/js/api.js"></script>
+    <script src="js/lovefield.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/uuid.js"></script>
+    <script src="js/index.js" type="text/babel"></script>
+</body>

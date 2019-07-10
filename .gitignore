@@ -1,0 +1,6 @@
+.env
+**/node_modules/
+package-lock.json
+config/*
+public/Output_PowerTrans.txt
+!config/*.default.*
